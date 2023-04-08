@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFC APP</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="img/logo-branco.png" alt="logo" class="cabecalho__logo">
+    </header>
+    <section class="proximo-evento">
+        <h2 class="proximo-evento__nome">UFC 287: Alex Pereira VS Israel Adesanya</h2>
+        <p class="proximo-evento__data">sáb, 8 de abr de 2023 às 23:00</p>
+        <div class="ufcpass">
+            <p class="proximo-evento__assistir">Disponível em </p>
+            <img src="img/logo-fightpass.png" alt="logo ufc fight pass" class="ufcpass__logo">
+        </div>
+        <p class="proximo-evento__contagem">Evento começa em</p>
+        <div class="contagem">
+            <div class="contagem__lista days-c">
+                <p class="text" id="days">0</p>
+                <span>dias</span>
+            </div>
+            <div class="contagem__lista hours-c">
+                <p class="text" id="hours">0</p>
+                <span>horas</span>
+            </div>
+            <div class="contagem__lista mins-c">
+                <p class="text" id="mins">0</p>
+                <span>minutos</span>
+            </div>
+            <div class="contagem__lista seconds-c">
+                <p class="text" id="seconds">0</p>
+                <span>segundos</span>
+            </div>
+        </div>
+    </section>
+    <section class="evento">
+        <h2 class="evento__next">Em breve</h2>
+        <div class="eventos-proximos">
+            <a href="noticia1.html" class="eventos-proximos__link">
+                <img src="img/poatan-pesagem.png" alt="poatan pesagem" class="eventos-proximos__foto1">
+                <div class="eventos-proximos__div">
+                    <h3 class="eventos-proximos__descricao">UFC 287: Pesagem Cerimonial</h3>
+                    <p class="eventos-proximos__data">sex, 7 de abr de 2023 às 17:00</p>
+                </div>
+            </a>
+            <a href="https://www.ufc.com.br/event/ufc-287" class="eventos-proximos__link">
+                <img src="img/ufc-287.png" alt="ufc 287 banner" class="eventos-proximos__foto2">
+                <div class="eventos-proximos__div">
+                    <h3 class="eventos-proximos__descricao">UFC 287: Pereira VS Adesanya 2</h3>
+                    <p class="eventos-proximos__data">sáb, 8 de abr de 2023 às 23:00</p>
+                    <div class="eventos-proximos__pass">
+                        <p class="eventos-proximos__assistir">Disponível em </p>
+                        <img src="img/logo-fightpass2.png" alt="logo fightpass" class="logo-fightpass">
+                    </div>
+                </div>
+            </a>
+            <div class="detalhes">
+                <input type="checkbox" id="checkbox" class="input">
+                <label for="checkbox" class="input-label">Ver detalhes do evento</label>
+                <img class="triangle" src="img/triangle.png" for="checkbox">
+                <div class="ufc-evento">
+                    <div class="main-fight">
+                        <p class="main-fight__divisao">Middleweight Bout</p>
+                        <p class="main-fight__desc">#Champion</p>
+                        <p class="main-fight__nome">Alex</p>
+                        <p class="main-fight__sobrenome">Pereira</p>
+                        <img src="img/poatan-prof.png" alt="Alex Poatan" class="profile">
+                        <img src="img/adesanya-prof.png" alt="Israel Adesanya" class="profile2">
+                        <p class="main-fight__desc2">#1 Ranked</p>
+                        <p class="main-fight__nome2">Israel</p>
+                        <p class="main-fight__sobrenome2">Adesanya</p>
+                    </div>
+                </div>
+                <div class="ufc-evento">
+                    <div class="main-fight">
+                        <p class="main-fight__divisao">Welterweight Bout</p>
+                        <p class="main-fight__desc">#5 Ranked</p>
+                        <p class="main-fight__nome">Gilbert</p>
+                        <p class="main-fight__sobrenome">Burns</p>
+                        <img src="img/burns-prof.png" alt="Gilbert Burns" class="profile">
+                        <img src="img/masvidal-prof.png" alt="Jorge Masvidal" class="profile2">
+                        <p class="main-fight__desc2">#11 Ranked</p>
+                        <p class="main-fight__nome2">Jorge</p>
+                        <p class="main-fight__sobrenome2">Masvidal</p>
+                    </div>
+                </div>
+                <div class="ufc-evento">
+                    <div class="main-fight">
+                        <p class="main-fight__divisao">Bantamweight Bout</p>
+                        <p class="main-fight__desc">#6 Ranked</p>
+                        <p class="main-fight__nome">Rob</p>
+                        <p class="main-fight__sobrenome">Font</p>
+                        <img src="img/font-prof.png" alt="Rob Font" class="profile">
+                        <img src="img/yanez-prof.png" alt="Adrian Yanez" class="profile2">
+                        <p class="main-fight__desc2">#12 Ranked</p>
+                        <p class="main-fight__nome2">Adrian</p>
+                        <p class="main-fight__sobrenome2">Yanez</p>
+                    </div>
+                </div>
+                <div class="ufc-evento">
+                    <div class="main-fight">
+                        <p class="main-fight__divisao">Welterweight Bout</p>
+                        <p class="main-fight__desc">#18 Ranked</p>
+                        <p class="main-fight__nome">Kevin</p>
+                        <p class="main-fight__sobrenome">Holland</p>
+                        <img src="img/holland-prof.png" alt="Kevin Holland" class="profile">
+                        <img src="img/santiago-prof.png" alt="Santiago Ponzinibbio" class="profile2">
+                        <p class="main-fight__desc2">#23 Ranked</p>
+                        <p class="main-fight__nome2">Santiago</p>
+                        <p class="main-fight__sobrenome2">Ponzinibbio</p>
+                    </div>
+                </div>
+                <div class="ufc-evento">
+                    <div class="main-fight">
+                        <p class="main-fight__divisao">Bantamweight Bout</p>
+                        <p class="main-fight__desc">#185 Ranked</p>
+                        <p class="main-fight__nome">Raul</p>
+                        <p class="main-fight__sobrenome">Rosas Jr.</p>
+                        <img src="img/rosas-prof.png" alt="Raul Rosas Jr." class="profile">
+                        <img src="img/rodriguez-prof.png" alt="Christian Rodriguez" class="profile2">
+                        <p class="main-fight__desc2">#215 Ranked</p>
+                        <p class="main-fight__nome2">Christian</p>
+                        <p class="main-fight__sobrenome2">Rodriguez</p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.ufc.com.br/event/ufc-287" class="eventos-proximos__link">
+                <img src="img/prelims-fight.png" alt="poatan x adesanya" class="eventos-proximos__foto2">
+                <div class="eventos-proximos__div">
+                    <h3 class="eventos-proximos__descricao">UFC 287: Prelims</h3>
+                    <p class="eventos-proximos__data">sáb, 8 de abr de 2023 às 21:00</p>
+                    <div class="eventos-proximos__pass">
+                        <p class="eventos-proximos__assistir">Disponível em </p>
+                        <img src="img/logo-fightpass2.png" alt="logo fightpass" class="logo-fightpass">
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.ufc.com.br/event/ufc-287" class="eventos-proximos__link">
+                <img src="img/ufc-287-2.jpg" alt="poatan x adesanya" class="eventos-proximos__foto2">
+                <div class="eventos-proximos__div">
+                    <h3 class="eventos-proximos__descricao">UFC 287: Fight Pass Prelims</h3>
+                    <p class="eventos-proximos__data">sáb, 8 de abr de 2023 às 19:00</p>
+                    <div class="eventos-proximos__pass">
+                        <p class="eventos-proximos__assistir">Disponível em </p>
+                        <img src="img/logo-fightpass2.png" alt="logo fightpass" class="logo-fightpass">
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.ufc.com.br/event/ufc-287" class="eventos-proximos__link">
+                <img src="img/ufc-287.png" alt="ufc 287 banner" class="eventos-proximos__foto2">
+                <div class="eventos-proximos__div">
+                    <h3 class="eventos-proximos__descricao">UFC 287: Post-Fight Press Conference</h3>
+                    <p class="eventos-proximos__data">dom, 9 de abr de 2023 às 02:15</p>
+                    <div class="eventos-proximos__pass">
+                        <p class="eventos-proximos__assistir">Disponível em </p>
+                        <img src="img/logo-fightpass2.png" alt="logo fightpass" class="logo-fightpass">
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.ufc.com.br/event/ufc-fight-night-april-15-2023" class="eventos-proximos__link">
+                <img src="img/ufc-fightnight.jpg" alt="Holloway x Allen" class="eventos-proximos__foto2">
+                <div class="eventos-proximos__div">
+                    <h3 class="eventos-proximos__descricao">UFC Fight Night: Holloway VS Allen</h3>
+                    <p class="eventos-proximos__data">sáb, 15 de abr de 2023 às 21:30</p>
+                    <div class="eventos-proximos__pass">
+                        <p class="eventos-proximos__assistir">Disponível em </p>
+                        <img src="img/logo-fightpass2.png" alt="logo fightpass" class="logo-fightpass">
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.ufc.com.br/event/ufc-fight-night-april-15-2023" class="eventos-proximos__link">
+                <img src="img/hollowayxallen.jpg" alt="Holloway x Allen" class="eventos-proximos__foto2">
+                <div class="eventos-proximos__div">
+                    <h3 class="eventos-proximos__descricao">UFC Kansas City: Post-Fight Press Conference</h3>
+                    <p class="eventos-proximos__data">dom, 16 de abr de 2023 às 00:30</p>
+                    <div class="eventos-proximos__pass">
+                        <p class="eventos-proximos__assistir">Disponível em </p>
+                        <img src="img/logo-fightpass2.png" alt="logo fightpass" class="logo-fightpass">
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.ufc.com.br/event/ufc-fight-night-april-22-2023" class="eventos-proximos__link">
+                <img src="img/ufc-fightnight2.jpg" alt="Pavlovich x Blaydes" class="eventos-proximos__foto2">
+                <div class="eventos-proximos__div">
+                    <h3 class="eventos-proximos__descricao">UFC Fight Night: Pavlovich VS Blaydes</h3>
+                    <p class="eventos-proximos__data">sáb, 22 de abr de 2023 às 21:00</p>
+                    <div class="eventos-proximos__pass">
+                        <p class="eventos-proximos__assistir">Disponível em </p>
+                        <img src="img/logo-fightpass2.png" alt="logo fightpass" class="logo-fightpass">
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.ufc.com.br/event/ufc-fight-night-april-22-2023" class="eventos-proximos__link">
+                <img src="img/pavloxblaydes.jpg" alt="Pavlovich x Blaydes" class="eventos-proximos__foto2">
+                <div class="eventos-proximos__div">
+                    <h3 class="eventos-proximos__descricao">UFC Vegas 72: Post-Fight Press Conference</h3>
+                    <p class="eventos-proximos__data">sáb, 22 de abr de 2023 às 23:00</p>
+                    <div class="eventos-proximos__pass">
+                        <p class="eventos-proximos__assistir">Disponível em </p>
+                        <img src="img/logo-fightpass2.png" alt="logo fightpass" class="logo-fightpass">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <footer class="menu">
+        <ul class="menu__click">
+            <li class="menu__escolha atual"><a href="index.html">
+                    <img src="img/calendario.png" alt="calendario" class="menu__img">
+                    <p class="menu__desc">Próximos</p>
+            </li></a>
+            <li class="menu__escolha"><a href="resultados.html">
+                    <img src="img/check.png" alt="check" class="menu__img">
+                    <p class="menu__desc">Resultados</p>
+            </li></a>
+            <li class="menu__escolha"><a href="fightpass.html">
+                    <img src="img/tela.png" alt="tela" class="menu__img">
+                    <p class="menu__desc">Fight Pass</p>
+            </li></a>
+            <li class="menu__escolha"><a href="noticias.html">
+                    <img src="img/news.png" alt="notícias" class="menu__img">
+                    <p class="menu__desc">Notícias</p>
+            </li></a>
+            <li class="menu__escolha"><a href="ranking.html">
+                    <img src="img/ranking.png" alt="ranking" class="menu__img">
+                    <p class="menu__desc">Ranking</p>
+            </li></a>
+        </ul>
+    </footer>
+</body>
+
+</html>

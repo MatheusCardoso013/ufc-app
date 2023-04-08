@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --fonte-principal: 'Anton';
+    --fonte-secundaria: 'Poppins';
+    --cor-secundaria: #ffffff86;
+    --letra-secundaria: #242424;
+    --letra-primaria: #FFFFFF;
+    --cor-primaria: #000;
+
+}
+
+body {
+    font-size: 24px;
+    background-color: var(--cor-primaria);
+    font-family: var(--fonte-principal);
+    letter-spacing: .5px;
+    color: var(--letra-primaria);
+}
+
+.cabecalho {
+    padding-top: .5em;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.cabecalho-back {
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    margin: .5em 0 0 .5em;
+}
+
+.proximo-evento {
+    background: url(img/next-event.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 268px;
+    padding: 0 1em;
+    margin-bottom: 1em;
+}
+
+.contagem-noticia {
+    background: url(img/poatan-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 210px;
+}
+
+.fp-luta {
+    background: url(img/fp-ufc287.jpg);
+    height: 370px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.proximo-evento__nome {
+    padding-top: 2.5em;
+    text-transform: uppercase;
+    color: var(--letra-primaria);
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.proximo-evento__data {
+    font-size: 14px;
+    color: var(--letra-primaria);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.ufcpass {
+    display: flex;
+    justify-content: cenater;
+    align-items: center;
+    margin-top: 10px;
+    line-height: 20px;
+
+}
+
+.proximo-evento__assistir {
+    font-size: 12px;
+    color: var(--letra-primaria);
+    font-weight: bold;
+}
+
+.ufcpass__logo {
+    width: 50px;
+    margin-left: 5px;
+}
+
+.proximo-evento__contagem {
+    color: var(--letra-primaria);
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 5px 0 3px;
+    font-weight: bold;
+}
+
+.contagem-peso {
+    color: var(--letra-primaria);
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0px;
+    font-weight: bold;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    padding: 3.5em 0 0;
+    margin-bottom: .5em;
+}
+
+.contagem,
+.tempo {
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 1.5px;
+
+}
+
+.contagem__lista,
+.tempo__lista {
+    color: var(--letra-primaria);
+    gap: 5px;
+    margin-top: 13px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.evento {
+    padding: 0 1em;
+    font-size: 20px;
+}
+
+.eventos-proximos {
+    font-size: 15px;
+}
+
+.evento__next {
+    font-family: var(--fonte-secundaria);
+    text-transform: uppercase;
+}
+
+.eventos-proximos__foto1 {
+    width: 135px;
+    height: 87px;
+}
+
+.eventos-proximos__descricao {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    color: var(--letra-primaria);
+}
+
+.eventos-proximos__data {
+    font-size: 10px;
+    color: var(--cor-secundaria);
+    margin-bottom: 2em;
+}
+
+.eventos-proximos__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5em;
+}
+
+.eventos-proximos__link:nth-child(2) {
+    margin-bottom: .5em;
+}
+
+.eventos-proximos__link:nth-child(10) {
+    margin-bottom: 6em;
+}
+
+.eventos-proximos__pass {
+    display: flex;
+    gap: 10px;
+    color: var(--letra-primaria);
+}
+
+.eventos-proximos__assistir {
+    font-size: 12px;
+    font-family: var(--fonte-secundaria);
+}
+
+.logo-fightpass {
+    width: 70px;
+}
+
+.eventos-proximos__foto2 {
+    width: 135px;
+    height: 87px;
+}
+
+.triangle {
+    width: 10px;
+}
+
+.input {
+    display: none;
+}
+
+.ufc-evento {
+    display: none;
+}
+
+.lutas {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    font-size: 15px;
+    justify-content: space-around;
+    margin: 0 1em 1.5em;
+    font-family: var(--fonte-secundaria);
+}
+
+.input:checked~.ufc-evento {
+    display: block;
+}
+
+.detalhes {
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: var(--fonte-secundaria);
+}
+
+.profile,
+.profile2 {
+    width: 70px;
+}
+
+.main-fight {
+    display: grid;
+    grid-template-areas:
+        "divisao divisao divisao divisao"
+        "desc1 img1 img2 desc2"
+        "nome1 img1 img2 nome2"
+        "sobre1 img1 img2 sobre2";
+    line-height: 13px;
+    border: 1px solid var(--cor-primaria);
+    margin-top: .5em;
+    background-color: var(--letra-secundaria);
+    justify-content: center;
+}
+
+.main-fight__divisao {
+    grid-area: divisao;
+    margin: .5em 0 1em;
+    color: var(--cor-secundaria);
+    padding: .5em;
+    border-bottom: 1px solid red;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.card .main-fight__divisao {
+    text-align: center;
+}
+
+.main-fight__desc {
+    grid-area: desc1;
+    color: var(--cor-secundaria);
+    text-align: end;
+    text-transform: uppercase;
+}
+
+.profile {
+    grid-area: img1;
+}
+
+.main-fight__nome {
+    grid-area: nome1;
+    text-align: end;
+    text-transform: uppercase;
+    font-family: var(--fonte-principal);
+    letter-spacing: 1px;
+}
+
+.main-fight__sobrenome {
+    grid-area: sobre1;
+    text-align: end;
+    font-family: var(--fonte-principal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main-fight__desc2 {
+    grid-area: desc2;
+    color: var(--cor-secundaria);
+    text-align: start;
+    text-transform: uppercase;
+}
+
+.profile2 {
+    grid-area: img2;
+}
+
+.main-fight__nome2 {
+    grid-area: nome2;
+    text-align: start;
+    font-family: var(--fonte-principal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main-fight__sobrenome2 {
+    grid-area: sobre2;
+    text-align: start;
+    text-transform: uppercase;
+    font-family: var(--fonte-principal);
+    letter-spacing: 1px;
+}
+
+.menu {
+    background-color: rgb(196, 48, 48);
+    position: fixed;
+    color: var(--letra-primaria);
+    bottom: 0px;
+    left: 0px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: var(--fonte-secundaria);
+    padding: 0 10px;
+    text-align: center;
+    width: 96%;
+}
+
+.menu__click {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    height: 75px;
+    width: 100%;
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+.menu__click a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+
+}
+
+.menu__img {
+    width: 20px;
+    height: 20px;
+}
+
+.atual {
+    filter: opacity(60%);
+}
+
+.peso-desc {
+    margin: 0 1em 1em;
+}
+
+.peso-desc__soon {
+    font-family: var(--fonte-secundaria);
+    font-weight: bold;
+    color: #d50303;
+    font-size: 17px;
+    margin-top: 1.5em;
+    margin: 1.5em 0 .7em;
+    letter-spacing: 1px;
+}
+
+.peso-desc__event {
+    color: var(--cor-secundaria);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.peso-info {
+    margin: 0 1em .5em;
+}
+
+.peso-info__titulo {
+    font-family: var(--fonte-secundaria);
+    text-transform: uppercase;
+    font-size: 17px;
+    border-bottom: 3px solid red;
+    width: 38%;
+    padding-bottom: 5px;
+    margin-bottom: 1em;
+}
+
+.peso-info__div {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    font-size: 15px;
+    font-family: var(--fonte-secundaria);
+}
+
+.peso-info__horario {
+    color: var(--cor-secundaria);
+}
+
+.resultados-proximo {
+    margin: 3em 1em 0;
+
+}
+
+.resultados-proximo__desc a {
+    text-decoration: none;
+    color: var(--letra-primaria);
+
+}
+
+.resultados-proximo__next {
+    margin: 0 0 .7em;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.resultados-proximo__desc {
+    padding: .7em;
+    background-color: var(--letra-secundaria);
+}
+
+.resultados-proximo__nome {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    margin-bottom: .7em;
+}
+
+.resultados-proximo__luta {
+    font-size: 10px;
+    color: var(--cor-secundaria);
+}
+
+.lutas-passadas {
+    margin: 1em 1em 3.5em;
+}
+
+.lutas-passadas__div {
+    margin: 0 0 .7em;
+}
+
+.fp-luta {
+    display: flex;
+    justify-content: center;
+}
+
+.fp-luta__div {
+    padding: 12em 0 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fp-luta__titulo {
+    letter-spacing: 2px;
+    margin-bottom: .7em;
+}
+
+.fp-luta__desc {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--cor-secundaria);
+    margin-bottom: 1em;
+}
+
+.fp-luta__assistir {
+    font-family: var(--fonte-secundaria);
+    background-color: red;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+.fp-luta__link {
+    text-decoration: none;
+    color: var(--letra-primaria);
+}
+
+.carrossel {
+    margin: 0 1em 1em;
+}
+
+.carrossel__titulo {
+    text-transform: uppercase;
+    padding: .8em 0 .5em;
+    font-family: var(--fonte-secundaria);
+    font-weight: bold;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-slide__desc {
+    padding-top: 8px;
+    font-size: 15px;
+
+}
+
+.swiper-slide__link {
+    text-decoration: none;
+    text-align: center;
+    color: var(--letra-primaria);
+}
+
+.swiper-slide img {
+    height: 190px;
+    width: 350px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 154px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--letra-primaria);
+}
+
+.fp-prog {
+    margin: 0 1em 1.2em;
+}
+
+.fp-prog__titulo {
+    font-family: var(--fonte-secundaria);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.fp-prog__lutas {
+    width: 100%;
+    margin-bottom: .3em;
+}
+
+.fp-prog__desc {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 1em;
+    font-weight: 400;
+    font-family: var(--fonte-secundaria);
+}
+
+.fp-prog__link {
+    text-decoration: none;
+    color: var(--letra-primaria);
+}
+
+.free {
+    margin: 0 1em 2.8em;
+}
+
+.free__titulo {
+    font-family: var(--fonte-secundaria);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: .8em
+}
+
+.free__link {
+    text-decoration: none;
+    color: var(--letra-primaria);
+}
+
+.free__img {
+    width: 100%;
+    margin-bottom: 0.3em;
+}
+
+.free__lutas {
+    margin-bottom: 1em;
+}
+
+.free__desc {
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+}
+
+.free__lutas:nth-child(6) {
+    margin-bottom: 4em;
+}
+
+.ranking-nome {
+    display: flex;
+    margin: 2.7em 1em 1em;
+    justify-content: center;
+}
+
+.ranking-nome__inicio {
+    text-transform: uppercase;
+    font-family: var(--fonte-secundaria);
+    border-bottom: 1px solid red;
+    padding: 7px 20px;
+    border-radius: 10px;
+}
+
+.p4p {
+    margin: 0 1em;
+}
+
+.p4p__div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--letra-secundaria);
+    padding: 20px;
+}
+
+.p4p__titulo {
+    font-size: 18px;
+}
+
+.p4p__img {
+    width: 15px;
+    height: 10px;
+}
+
+.ranking {
+    margin: 1em 0;
+}
+
+.ranking a {
+    text-decoration: none;
+    color: var(--letra-primaria);
+}
+
+.ranking-img {
+    width: 140px;
+    margin-left: 15%;
+    height: 95px;
+}
+
+.ranking-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--letra-secundaria);
+    padding: 10px;
+    height: 80px;
+    margin-top: -15px;
+}
+
+.ranking-desc {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px 0;
+    align-items: center;
+
+}
+
+.ranking-desc_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fonte-secundaria);
+    background-color: var(--letra-primaria);
+    color: var(--cor-primaria);
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.ranking-desc_2 {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: red;
+    font-family: var(--fonte-secundaria);
+}
+
+.ranking-position {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ranking-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+.ranking-name {
+    font-size: 17px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px
+}
+
+.ranking-score {
+    font-size: 12px;
+    color: var(--letra-primaria);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ranking-apelido {
+    color: var(--cor-secundaria);
+    font-size: 13px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-family: var(--fonte-secundaria);
+}
+
+.last {
+    margin-bottom: 4em;
+}
+
+.noticia {
+    margin: 3.5em 1em 0;
+}
+
+.noticia__div {
+    position: relative;
+    margin-bottom: .5em;
+    border: 1px solid white;
+}
+
+.noticia__div__desc {
+    position: absolute;
+    bottom: 10%;
+    left: 6%;
+    color: white;
+    font-size: 13px;
+    font-family: var(--fonte-secundaria);
+    font-weight: bold;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #000;
+}
+
+.noticia__div__p {
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.noticia__div__data {
+    color: #ffffffb0;
+    font-family: var(--fonte-secundaria);
+}
+
+.noticia__div__img {
+    width: 100%;
+    height: 170px;
+    filter: brightness(0.9);
+}
+
+.ultimo {
+    margin-bottom: 4em;
+}
